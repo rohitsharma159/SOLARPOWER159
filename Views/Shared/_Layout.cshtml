@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>@(ViewData["Title"] ?? "Solarpowers") – Solarpowers</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+<header>
+    <a class="logo" href="/" aria-label="Solarpowers home"><b>Solar</b>powers</a>
+    <nav id="nav" aria-label="Main navigation">
+        <a href="/" data-route="home">Home</a>
+        <a href="/shop" data-route="shop">Shop</a>
+        <a href="/learn" data-route="learn">Learn</a>
+        <a href="/gallery" data-route="gallery">Gallery</a>
+        <a href="/contact" data-route="contact">Contact</a>
+        <a href="/feedback" data-route="feedback">Feedback</a>
+        <a href="/admin" data-route="admin">Admin</a>
+    </nav>
+    <div class="hr"><a class="cartb" href="/cart" aria-label="Cart">Cart<span id="cc2"></span></a><button class="burger" onclick="document.body.classList.toggle('mo')" aria-label="Menu">☰</button></div>
+</header>
+@RenderBody()
+<footer><b>Solarpowers</b> · Clean energy for every home<br />Email: info@solarpowers.com · Phone: +91 00000 00000</footer>
+<button id="chatBtn">Solar Expert</button>
+<div id="chat"><div id="msgs"><div class="m a">Namaste! Main Solar Expert hoon. Panels, inverter, battery ya system size ke baare mein poochiye.</div></div><div id="cin"><input id="ci" placeholder="Ask about solar…" /><button class="btn" id="cs">Send</button></div></div>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
